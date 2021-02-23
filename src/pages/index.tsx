@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import Router from 'next/router';
 import { IState } from "../store";
@@ -11,13 +10,11 @@ export default function Home() {
     Router.push(page);
   }
 
-  if (process.browser && !loggedUser) {
-    redirectTo('/login');
+  if (!loggedUser) {
+    if (process.browser) {
+      redirectTo('/login');
+    }
     return <div />
-  }
-
-  if (!process.browser) {
-    return <div />;
   }
 
   const {

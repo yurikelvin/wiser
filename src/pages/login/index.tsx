@@ -9,7 +9,12 @@ import {
   SubTitle,
   AsideLogin,
   LogoContainer,
-  LoginLogoLayer
+  LoginLogoLayer,
+  Footer,
+  Link,
+  ContentContainerLayout,
+  ContentContainerLayer,
+  InnerContentContainer
 } from '../../styles/pages/Login';
 import LoginForm from '../../components/LoginForm';
 
@@ -29,15 +34,24 @@ export default function Login() {
        <LoginLogoLayer />
        <LogoContainer />
       </AsideLogin>
-      <ContentContainer>
-        <TitleContainer>
-          <Title>Olá, seja</Title>
-          <Title>bem-vindo!</Title>
-        </TitleContainer>
-        <SubTitle>Para acessar a plataforma, faça seu login.</SubTitle>
-        <LoginForm handleAfterSubmit={handleAfterSubmit} />
-      </ContentContainer>
-      
+      <ContentContainerLayout>
+        <ContentContainer>
+          <InnerContentContainer>
+
+          <TitleContainer>
+            <Title>Olá, seja</Title>
+            <Title>bem-vindo!</Title>
+          </TitleContainer>
+          <SubTitle>Para acessar a plataforma, faça seu login.</SubTitle>
+          <LoginForm handleAfterSubmit={handleAfterSubmit} />
+          <Footer>
+            <span>Esqueceu seu login ou senha?</span>
+            <span>Clique <Link href="/login">aqui</Link></span>
+          </Footer>
+          </InnerContentContainer>
+        </ContentContainer>
+        <ContentContainerLayer />
+      </ContentContainerLayout>
     </Container>
   )
 }

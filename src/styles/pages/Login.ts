@@ -4,18 +4,65 @@ export const Title = styled.span`
   color: #383E71;
   font-weight: 400;
   font-size: 4.2rem;
+  white-space: nowrap;
+
+  @media (max-width: 767px) {
+    font-size: 2rem;
+  }
 `
 export const Container = styled.div`
   display: flex;
   width: 100%;
   height: 100%;
+  overflow: hidden;
+  position: relative;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
 `
 
 export const ContentContainer = styled.div`
   display: flex;
+  z-index: 10;
+  background: transparent;
+  min-width: fit-content;
+  height: 100%;
+  @media (max-width: 767px) {
+    width: 100%;
+    position: absolute;
+    padding-left: 2vw;
+    padding-top: 0vh;
+    z-index: 100;
+    margin-top: -35vh;
+    justify-content: center;
+    align-items: center;
+  }
+`
+
+export const InnerContentContainer = styled.div`
+  display: flex;
   flex-direction: column;
-  margin-left: 8rem;
-  margin-top: 4rem;
+  padding-left: 10vw;
+  padding-top: 4rem;
+  padding-right: 2vw;
+  z-index: 10;
+  background: #FAF5FF;
+  min-width: fit-content;
+  @media (max-width: 767px) {
+    width: 100%;
+    padding-top: 4vh;
+    z-index: 100;
+    width: 100%;
+    padding-bottom: 2vh;
+    margin-right: 6vw;
+    margin-left: 6vw;
+    padding-left: 5vw;
+    margin-bottom: 30vh;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+  }
 `
 
 export const TitleContainer = styled.div`
@@ -30,12 +77,42 @@ export const SubTitle = styled.span`
   width: 22rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  @media (max-width: 767px) {
+    font-size: 0.750rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 `
 
 export const AsideLogin = styled.aside`
   width: 100%;
   height: 100%;
   position: relative;
+  min-width: 290px;
+  @media (max-width: 767px) {
+    min-height: 376px;
+  }
+`
+
+export const ContentContainerLayout = styled.div`
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  @media (max-width: 767px) {
+    width: 100%;
+    position: static;
+    z-index: 100;
+  }
+`
+
+export const ContentContainerLayer = styled.div`
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #130525;
+  z-index: 1;
 `
 
 export const LoginLogoLayer = styled.div`
@@ -56,4 +133,24 @@ export const LogoContainer = styled.div`
   background-position: 50% 50%;
   position:relative;
   z-index: 1;
+`
+
+export const Footer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #989FDB;
+  width: 16rem;
+  margin-top: 2rem;
+  @media (max-width: 767px) {
+    width: 100%;
+    font-size: 0.750rem;
+    width: 12rem;
+  }
+`
+
+export const Link = styled.a`
+  color: #AF5AC1;
+
 `
