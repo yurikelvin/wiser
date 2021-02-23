@@ -16,9 +16,22 @@ export default function Home() {
     return <div />
   }
 
+  if (!process.browser) {
+    return <div />;
+  }
+
+  const {
+    id,
+    firstName,
+    lastName,
+    email
+  } = loggedUser;
+
   return (
-    <div>
-      <h1>Hello World</h1>
+    <div style={{ display: 'flex', flexDirection: 'column', width: '100%', height: '100%', margin: '2rem' }}>
+      <span>Olá, {firstName} {lastName}</span>
+      <span>Seu email é: {email}</span>
+      <span>Você é o usuário de ID: {id}</span>
     </div>
   )
 }

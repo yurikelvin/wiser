@@ -9,7 +9,8 @@ const user: Reducer<ILoggedUserState> = (state = INITIAL_STATE, action) => {
       const { user } = action.payload;
       return {
         ...state,
-        loggedUser: user
+        loggedUser: user,
+        loggedUserErrorMessage: ''
       };
     }
     case 'SET_LOGGED_USER_FAILURE': {
