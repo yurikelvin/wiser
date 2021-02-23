@@ -81,7 +81,6 @@ export default function LoginForm({ handleAfterSubmit }) {
 
       if (await isLoginFieldsValid()) {
         submitLoginData({ email, password })
-
         setTimeout(() => {
           if (loginErrorMessage.trim() === '') {
             handleAfterSubmit()

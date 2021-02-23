@@ -28,6 +28,7 @@ export const ContentContainer = styled.div`
   background: transparent;
   min-width: fit-content;
   height: 100%;
+  flex-shrink: 0;
   @media (max-width: 767px) {
     width: 100%;
     position: absolute;
@@ -37,6 +38,7 @@ export const ContentContainer = styled.div`
     margin-top: -35vh;
     justify-content: center;
     align-items: center;
+    flex-shrink: 1;
   }
 `
 
@@ -48,7 +50,8 @@ export const InnerContentContainer = styled.div`
   padding-right: 2vw;
   z-index: 10;
   background: #FAF5FF;
-  min-width: fit-content;
+  min-width: 420px;
+  flex-shrink: 0;
   @media (max-width: 767px) {
     width: 100%;
     padding-top: 4vh;
@@ -62,12 +65,15 @@ export const InnerContentContainer = styled.div`
     border-radius: 8px;
     justify-content: center;
     align-items: center;
+    min-width: 0;
+    flex-shrink: 1;
   }
 `
 
 export const TitleContainer = styled.div`
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
 `
 
 export const SubTitle = styled.span`
@@ -97,9 +103,9 @@ export const AsideLogin = styled.aside`
 
 export const ContentContainerLayout = styled.div`
   height: 100%;
-  position: relative;
   display: flex;
   flex-shrink: 0;
+  overflow: hidden;
   @media (max-width: 767px) {
     width: 100%;
     position: static;
