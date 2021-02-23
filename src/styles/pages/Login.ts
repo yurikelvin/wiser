@@ -16,7 +16,6 @@ export const Container = styled.div`
   height: 100%;
   overflow: hidden;
   position: relative;
-
   @media (max-width: 767px) {
     flex-direction: column;
   }
@@ -92,12 +91,13 @@ export const SubTitle = styled.span`
 `
 
 export const AsideLogin = styled.aside`
-  width: 100%;
+  width: 61vw;
   height: 100%;
   position: relative;
   min-width: 290px;
   @media (max-width: 767px) {
     min-height: 376px;
+    width: 100%;
   }
 `
 

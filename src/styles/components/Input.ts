@@ -36,5 +36,4 @@ export const InputWrapper = styled.div`
   width: 256px;
   height: 100%;
   margin-bottom: 1rem;
-
 `
